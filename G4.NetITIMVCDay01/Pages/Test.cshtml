@@ -1,0 +1,21 @@
+﻿@page   
+@* Page Directive *@
+@model G4.NetITIMVCDay01.Pages.TestModel
+@{
+}
+
+<h1>Hello From Test Page</h1>
+<span>Test Page</span>
+
+int x = 5;  => Text
+
+@{
+    int x = 5;
+    x++;
+}
+<h1>@x</h1>   @*x = 6*@
+
+@for(int i = 0; i < 5; i++)
+{
+    <h1>@i</h1>
+}

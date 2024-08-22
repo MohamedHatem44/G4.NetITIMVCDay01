@@ -1,0 +1,53 @@
+﻿@page
+@model G4.NetITIMVCDay01.Pages.FormModel
+@{
+}
+
+<style>
+
+    #h1{
+        color:red
+    }
+
+</style>
+
+
+<form>
+    <label for="idCode">Code</label>
+    <input type="number" name="idCode" /> @* name is used as key in the query string*@
+
+    <hr />
+    <br />
+
+    <label for="name">Name</label>
+    <input type="text" name="name" />
+
+    <hr />
+    <br />
+
+    <label for="showMess">Show Message</label>
+    <input type="radio" name="showMess" />
+
+    <hr />
+    <br />
+
+    <input type="submit"/>
+</form>
+
+@{
+    string? code = Request.Query["idCode"];
+    string? userName = Request.Query["name"];
+    string? showMess = Request.Query["showMess"];
+
+
+    if(code != null && userName != null && showMess != null)
+    {
+        // <h1 style="color:red">Hello @userName your Code is @code</h1>
+        <h1 id="h1">Hello @userName your Code is @code</h1>
+    }
+}
+
+
+<script>
+
+</script>
